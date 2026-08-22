@@ -407,6 +407,52 @@ document.addEventListener('DOMContentLoaded', () => {
   renderTracker();
 
   // step 1
+  const SAMPLE_CV = `Juan Dela Cruz
+juan.delacruz@email.com | 0917-123-4567
+Web Developer — 2.5 years
+
+EXPERIENCE
+• Built 12 e-commerce sites with WordPress and Shopify for local businesses
+• Automated client reports using Python and Excel, saving 10 hours a week
+• Maintained Linux hosting, backups and domains for 20 client sites
+SKILLS
+JavaScript, HTML, CSS, PHP, MySQL, Git, Canva, Customer Service, SEO`;
+  const SAMPLE_JD = `Junior Web Developer — Acme Retail Group (JobStreet)
+
+We need a junior web developer to maintain and grow our online store.
+
+Requirements:
+- 1-2 years experience with JavaScript and WordPress
+- Comfortable with HTML, CSS, and basic SEO
+- Familiar with the Shopify e-commerce platform
+- Knowledge of React is a plus
+- Google Analytics and Facebook Ads experience preferred
+- Junior/entry-level applicants welcome`;
+
+  $('cvSample').addEventListener('click', () => {
+    $('cvInput').value = SAMPLE_CV;
+    $('jdInput').value = SAMPLE_JD;
+    $('jdCompany').value = 'Acme Retail Group';
+    $('jdRole').value = 'Junior Web Developer';
+    $('cvAnalyze').click();
+    $('matchBtn').click();
+    toast('Sample loaded — scroll to step 3 for your materials.');
+  });
+  $('cvSave').classList.remove('hidden');
+  $('cvSave').addEventListener('click', () => {
+    try {
+      localStorage.setItem('closer_cv_text', $('cvInput').value);
+      $('cvSavedHint').textContent = 'Saved ✓ (auto-restores next visit)';
+      toast('CV saved to this browser.');
+    } catch (e) { toast('Could not save (storage full).'); }
+  });
+  try {
+    const savedCv = localStorage.getItem('closer_cv_text');
+    if (savedCv && !$('cvInput').value) { $('cvInput').value = savedCv; $('cvSavedHint').textContent = 'Restored from last visit'; }
+  } catch (e) {}
+
+  $('printMat').addEventListener('click', () => window.print());
+
   $('cvAnalyze').addEventListener('click', () => {
     profile = parseResume($('cvInput').value);
     renderProfile();
@@ -487,6 +533,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   $('codeInput').addEventListener('keydown', e => { if (e.key === 'Enter') $('codeBtn').click(); });
   document.querySelectorAll('.modal').forEach(m => m.addEventListener('click', e => { if (e.target === m) m.classList.add('hidden'); }));
+
+  // lucide icons (visual only, guarded — absent in tests)
+  if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
 
   // GSAP entrance (visual only, guarded — absent in tests)
   if (window.gsap) {

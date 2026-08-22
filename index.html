@@ -22,6 +22,7 @@ tailwind.config = {
 };
 </script>
 <link rel="stylesheet" href="style.css">
+<style>[x-cloak]{display:none}</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -73,7 +74,7 @@ tailwind.config = {
   </section>
 
   <!-- ============ STEP 1: CV ============ -->
-  <section id="step1" class="card-step">
+  <section id="step1" class="card-step reveal">
     <div class="step-head">
       <div class="step-no">1</div>
       <div>
@@ -83,6 +84,8 @@ tailwind.config = {
     </div>
     <textarea id="cvInput" class="textarea textarea-bordered w-full h-44 leading-relaxed" placeholder="Paste your CV text here (Ctrl+A on your CV file/PDF text, copy, paste)…&#10;&#10;Example format:&#10;Juan Dela Cruz&#10;juan@email.com | 0917-123-4567&#10;Web Developer — 2.5 years experience&#10;• Built e-commerce sites with WordPress and Shopify&#10;• Automated reports with Python and Excel…"></textarea>
     <div class="mt-3 flex flex-wrap items-center gap-3">
+      <button id="cvSample" class="btn btn-outline border-slate-300">Try a sample</button>
+      <button id="cvSave" class="btn btn-outline border-slate-300 hidden">Save CV</button>
       <button id="cvAnalyze" class="btn bg-brand2 hover:bg-brand border-brand2 text-white font-heading font-semibold">Analyze my CV</button>
       <label class="btn btn-outline border-slate-300 cursor-pointer">
         <span>Upload .txt/.md file</span>
@@ -94,7 +97,7 @@ tailwind.config = {
   </section>
 
   <!-- ============ STEP 2: JOB POST ============ -->
-  <section id="step2" class="card-step">
+  <section id="step2" class="card-step reveal">
     <div class="step-head">
       <div class="step-no">2</div>
       <div>
@@ -143,7 +146,7 @@ tailwind.config = {
   </section>
 
   <!-- ============ STEP 3: MATERIALS ============ -->
-  <section id="step3" class="card-step">
+  <section id="step3" class="card-step reveal">
     <div class="step-head">
       <div class="step-no">3</div>
       <div>
@@ -152,6 +155,7 @@ tailwind.config = {
       </div>
     </div>
     <div id="matWrap" class="hidden">
+      <div class="flex justify-end mb-1 no-print"><button id="printMat" class="btn btn-sm btn-outline border-slate-300">🖨️ Print current tab</button></div>
       <div role="tablist" class="tabs tabs-boxed bg-white border border-slate-200 mb-4 font-semibold">
         <a role="tab" class="tab tab-active" data-tab="cv">Tailored CV</a>
         <a role="tab" class="tab" data-tab="letter">Cover letter</a>
@@ -212,7 +216,7 @@ tailwind.config = {
   </section>
 
   <!-- ============ STEP 4: TRACKER ============ -->
-  <section id="step4" class="card-step">
+  <section id="step4" class="card-step reveal">
     <div class="step-head">
       <div class="step-no">4</div>
       <div>
@@ -341,6 +345,7 @@ tailwind.config = {
 
 <div id="toast" class="toast hidden"></div>
 
-<script src="app.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+    <script src="app.js"></script>
 </body>
 </html>
