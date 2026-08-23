@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Closer — Land the Job, Not Just Apply | Tailored CVs, Cover Letters &amp; Follow-Up Autopilot</title>
+<link rel="manifest" href="manifest.json">
 <meta name="description" content="Paste your CV + the job post → ATS-tailored CV bullets, a specific cover letter, client outreach DMs, Day 0/3/7 follow-ups, and an interview prep sheet. Free, private, works in your browser. Built for PH job hunters & freelancers who can't get replies.">
 <meta property="og:title" content="Closer — Land the Job, Not Just Apply">
 <meta property="og:description" content="Paste your CV + job post → ATS-tailored CV, cover letter, client DM, follow-ups, interview prep. Free, private, works in your browser.">
@@ -373,5 +374,11 @@
 
 <script src="lucide.min.js"></script>
 <script src="app.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(() => {});
+}
+</script>
 </body>
 </html>
