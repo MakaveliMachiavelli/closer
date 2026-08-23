@@ -1,0 +1,23 @@
+{
+  "name": "closer",
+  "version": "1.0.0",
+  "description": "**Live:** https://makavelimachiavelli.github.io/closer/",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MakaveliMachiavelli/closer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MakaveliMachiavelli/closer/issues"
+  },
+  "homepage": "https://github.com/MakaveliMachiavelli/closer#readme",
+  "dependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles from style.css */
+[x-cloak] {
+  display: none;
+}
+
+/* Add any other custom styles here */
