@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="closer">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Closer — Land the Job, Not Just Apply | Tailored CVs, Cover Letters &amp; Follow-Up Autopilot</title>
+<meta name="description" content="Paste your CV + the job post → ATS-tailored CV bullets, a specific cover letter, client outreach DMs, Day 0/3/7 follow-ups, and an interview prep sheet. Free, private, works in your browser. Built for PH job hunters & freelancers who can't get replies.">
+<link rel="canonical" href="https://makavelimachiavelli.github.io/closer/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23312e81'/%3E%3Cpath d='M20 18h24v6H26v8h16v6H26v8h-6z' fill='%23f59e0b'/%3E%3C/svg%3E">
+<!-- STACK.md premium stack — REDESIGNED: editorial warm-luxe, not SaaS-indigo -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { brand:'#1a1410', brand2:'#3d2f23', ink:'#1a1410', muted:'#7c6f5f', accent:'#c8962a', accdeep:'#9a6f1c', paper:'#faf6ef', line:'#e7ddcd' },
+    fontFamily: { heading:['Fraunces','serif'], body:['Inter','sans-serif'] }
+  }}
+};
+</script>
+<link rel="stylesheet" href="style.css">
+<style>[x-cloak]{display:none}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Why am I not getting responses to job applications?","acceptedAnswer":{"@type":"Answer","text":"Most applications fail two filters: generic CVs that don't mirror the job description's keywords (ATS and recruiter skim), and zero follow-up (most replies come from the 2nd or 3rd touch, which most applicants never send). Closer fixes both: it tailors your materials to each post and scripts your Day 0/3/7 follow-ups."}},
+    {"@type":"Question","name":"Does Closer upload my CV anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Everything runs in your browser — parsing, matching, tailoring, and the tracker all happen locally. Your CV and applications never leave your device."}},
+    {"@type":"Question","name":"Is Closer free?","acceptedAnswer":{"@type":"Answer","text":"The free tier includes CV analysis, job matching, 3 tailored material sets, and 5 tracked applications. PRO (₱199 one-time, GCash) unlocks unlimited tailoring, unlimited tracker rows, and CSV export."}}
+  ]
+}
+</script>
+</head>
+<body class="font-body bg-slate-50 text-ink">
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-2.5">
+      <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#312e81"/><path d="M20 18h24v6H26v8h16v6H26v8h-6z" fill="#f59e0b"/></svg>
+      <span class="font-heading font-bold text-xl tracking-tight">Closer<span class="text-accent">.</span></span>
+    </a>
+    <nav class="flex items-center gap-2 sm:gap-4">
+      <a href="#how" class="hidden sm:inline text-sm font-semibold text-muted hover:text-ink">How it works</a>
+      <a href="#faq" class="hidden sm:inline text-sm font-semibold text-muted hover:text-ink">FAQ</a>
+      <span id="proBadge" class="badge badge-warning badge-outline hidden font-bold">PRO</span>
+      <button id="proBtn" class="btn btn-primary btn-sm bg-brand2 hover:bg-brand border-brand2 font-heading">PRO — ₱199</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="max-w-6xl mx-auto px-4">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero text-center py-14 sm:py-20">
+    <div class="badge badge-outline border-accent text-accdeep font-semibold mb-4">Job &amp; client acquisition autopilot</div>
+    <h1 class="font-heading font-bold text-4xl sm:text-6xl tracking-tight leading-[1.05]">Land the job,<br><span class="text-brand2">not just apply.</span></h1>
+    <p class="mt-5 text-lg text-muted max-w-2xl mx-auto">Generic applications get ignored. Closer reads the job post, tailors your CV to its exact keywords, writes the cover letter and the client DM, and scripts your <b class="text-ink">Day 0 / 3 / 7 follow-ups</b> — the part almost everyone skips. Private, offline, no account.</p>
+    <div class="mt-7 flex flex-wrap justify-center gap-2 text-sm font-semibold">
+      <span class="pill">✓ ATS keyword tailoring</span>
+      <span class="pill">✓ Cover letters that don't suck</span>
+      <span class="pill">✓ Client outreach DMs</span>
+      <span class="pill">✓ Follow-up discipline</span>
+      <span class="pill">✓ Interview prep sheet</span>
+    </div>
+    <div class="mt-8 flex justify-center gap-3">
+      <a href="#step1" class="btn bg-brand2 hover:bg-brand border-brand2 text-white font-heading" id="ctaStart">Start free — paste your CV</a>
+      <a href="#how" class="btn btn-ghost border-slate-300">See how it works</a>
+    </div>
+  </section>
+
+  <!-- ============ STEP 1: CV ============ -->
+  <section id="step1" class="card-step reveal">
+    <div class="step-head">
+      <div class="step-no">1</div>
+      <div>
+        <h2 class="font-heading font-bold text-2xl">Your CV</h2>
+        <p class="text-muted text-sm mt-0.5">Paste the full text of your CV. Parsed locally — nothing uploads.</p>
+      </div>
+    </div>
+    <textarea id="cvInput" class="textarea textarea-bordered w-full h-44 leading-relaxed" placeholder="Paste your CV text here (Ctrl+A on your CV file/PDF text, copy, paste)…&#10;&#10;Example format:&#10;Juan Dela Cruz&#10;juan@email.com | 0917-123-4567&#10;Web Developer — 2.5 years experience&#10;• Built e-commerce sites with WordPress and Shopify&#10;• Automated reports with Python and Excel…"></textarea>
+    <div class="mt-3 flex flex-wrap items-center gap-3">
+      <button id="cvSample" class="btn btn-outline border-slate-300">Try a sample</button>
+      <button id="cvSave" class="btn btn-outline border-slate-300 hidden">Save CV</button>
+      <button id="cvAnalyze" class="btn bg-brand2 hover:bg-brand border-brand2 text-white font-heading font-semibold">Analyze my CV</button>
+      <label class="btn btn-outline border-slate-300 cursor-pointer">
+        <span>Upload .txt/.md file</span>
+        <input id="cvFile" type="file" accept=".txt,.md,.csv" class="hidden" />
+      </label>
+      <span class="text-sm text-muted" id="cvHint">We extract skills, roles, years of experience, contact info.</span>
+    </div>
+    <div id="cvProfile" class="hidden mt-4"></div>
+  </section>
+
+  <!-- ============ STEP 2: JOB POST ============ -->
+  <section id="step2" class="card-step reveal">
+    <div class="step-head">
+      <div class="step-no">2</div>
+      <div>
+        <h2 class="font-heading font-bold text-2xl">The job post</h2>
+        <p class="text-muted text-sm mt-0.5">Paste the JD / gig post. The fetch button tries public sources; pasting always works.</p>
+      </div>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-3">
+      <label class="form-control">
+        <span class="label-text text-xs font-semibold text-muted mb-1">Company / client</span>
+        <input id="jdCompany" class="input input-bordered w-full" placeholder="e.g. Acme Corp">
+      </label>
+      <label class="form-control">
+        <span class="label-text text-xs font-semibold text-muted mb-1">Role / project</span>
+        <input id="jdRole" class="input input-bordered w-full" placeholder="e.g. Junior Web Developer">
+      </label>
+      <label class="form-control">
+        <span class="label-text text-xs font-semibold text-muted mb-1">Post URL (optional)</span>
+        <div class="flex gap-2">
+          <input id="jdUrl" class="input input-bordered w-full" placeholder="https://…">
+          <button id="jdFetch" class="btn btn-outline border-slate-300 whitespace-nowrap" title="Fetch via public reader proxy">Fetch</button>
+        </div>
+      </label>
+    </div>
+    <textarea id="jdInput" class="textarea textarea-bordered w-full h-40 mt-3 leading-relaxed" placeholder="Paste the full job description / gig post here…&#10;&#10;Sources that work well: JobStreet, Indeed PH, OnlineJobs.ph, LinkedIn, Upwork, r/phjobs, Facebook group posts."></textarea>
+    <p class="text-xs text-muted mt-1" id="fetchMsg"></p>
+    <div class="mt-3">
+      <button id="matchBtn" class="btn bg-brand2 hover:bg-brand border-brand2 text-white font-heading font-semibold">Match &amp; score</button>
+    </div>
+    <div id="matchPanel" class="hidden mt-4 grid md:grid-cols-3 gap-4">
+      <div class="score-card">
+        <div class="radial" style="--v:0"><span id="matchScore">0</span><small>%</small></div>
+        <div class="text-xs font-bold tracking-wide text-muted mt-2">KEYWORD MATCH</div>
+        <div id="seniority" class="text-sm font-semibold text-accdeep mt-1"></div>
+      </div>
+      <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200">
+        <h3 class="font-heading font-bold text-emerald-900 text-sm mb-2">✓ You already have</h3>
+        <div id="matchedSkills" class="flex flex-wrap gap-1.5"></div>
+      </div>
+      <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200">
+        <h3 class="font-heading font-bold text-amber-900 text-sm mb-2">→ Close the gap on</h3>
+        <div id="missingSkills" class="flex flex-wrap gap-1.5"></div>
+        <p class="text-[11px] text-amber-800 mt-2">These get woven into your tailored materials below — honestly (as skills to highlight or learn).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STEP 3: MATERIALS ============ -->
+  <section id="step3" class="card-step reveal">
+    <div class="step-head">
+      <div class="step-no">3</div>
+      <div>
+        <h2 class="font-heading font-bold text-2xl">Your tailored materials</h2>
+        <p class="text-muted text-sm mt-0.5">Generated from your CV × this job post. Edit anything, then copy.</p>
+      </div>
+    </div>
+    <div id="matWrap" class="hidden">
+      <div class="flex justify-end mb-1 no-print"><button id="printMat" class="btn btn-sm btn-outline border-slate-300">🖨️ Print current tab</button></div>
+      <div role="tablist" class="tabs tabs-boxed bg-white border border-slate-200 mb-4 font-semibold">
+        <a role="tab" class="tab tab-active" data-tab="cv">Tailored CV</a>
+        <a role="tab" class="tab" data-tab="letter">Cover letter</a>
+        <a role="tab" class="tab" data-tab="dm">Client DM</a>
+        <a role="tab" class="tab" data-tab="follow">Follow-ups</a>
+        <a role="tab" class="tab" data-tab="interview">Interview prep</a>
+      </div>
+
+      <div class="tab-panel" id="panel-cv">
+        <div class="mb-2 flex items-center justify-between flex-wrap gap-2">
+          <p class="text-sm text-muted">ATS summary + reordered skills + keyword-loaded bullet skeletons. Replace [bracketed] numbers with your real metrics.</p>
+          <button class="btn btn-sm btn-outline border-slate-300 copy-btn" data-copy="outCv">Copy</button>
+        </div>
+        <textarea id="outCv" class="textarea textarea-bordered w-full h-80 font-mono text-xs leading-relaxed"></textarea>
+      </div>
+
+      <div class="tab-panel hidden" id="panel-letter">
+        <div class="mb-2 flex items-center justify-between flex-wrap gap-2">
+          <p class="text-sm text-muted">Specific, short, human. References the exact role and the skills they asked for.</p>
+          <button class="btn btn-sm btn-outline border-slate-300 copy-btn" data-copy="outLetter">Copy</button>
+        </div>
+        <textarea id="outLetter" class="textarea textarea-bordered w-full h-80 leading-relaxed"></textarea>
+      </div>
+
+      <div class="tab-panel hidden" id="panel-dm">
+        <div class="grid sm:grid-cols-2 gap-3 mb-2">
+          <label class="form-control"><span class="label-text text-xs font-semibold text-muted mb-1">Client / poster name</span>
+            <input id="dmClient" class="input input-bordered" placeholder="e.g. Sarah (Upwork poster)"></label>
+          <label class="form-control"><span class="label-text text-xs font-semibold text-muted mb-1">Their #1 problem (1 line)</span>
+            <input id="dmProblem" class="input input-bordered" placeholder="e.g. needs Shopify store fixed before 9.9 sale"></label>
+        </div>
+        <div class="mb-2 flex items-center justify-between flex-wrap gap-2">
+          <p class="text-sm text-muted">Proposal DM for freelance/client work — observation → proof → scoped offer → CTA.</p>
+          <button class="btn btn-sm btn-outline border-slate-300 copy-btn" data-copy="outDm">Copy</button>
+        </div>
+        <textarea id="outDm" class="textarea textarea-bordered w-full h-72 leading-relaxed"></textarea>
+      </div>
+
+      <div class="tab-panel hidden" id="panel-follow">
+        <div class="mb-2 flex items-center justify-between flex-wrap gap-2">
+          <p class="text-sm text-muted">Most replies come from touch #2 or #3. These are ready to send on schedule — polite, short, value-adding.</p>
+          <button class="btn btn-sm btn-outline border-slate-300 copy-btn" data-copy="outFollow">Copy all</button>
+        </div>
+        <textarea id="outFollow" class="textarea textarea-bordered w-full h-80 leading-relaxed"></textarea>
+      </div>
+
+      <div class="tab-panel hidden" id="panel-interview">
+        <div class="mb-2 flex items-center justify-between flex-wrap gap-2">
+          <p class="text-sm text-muted">Likely questions (from the JD) with STAR skeletons that pull your real experience.</p>
+          <button class="btn btn-sm btn-outline border-slate-300 copy-btn" data-copy="outInterview">Copy</button>
+        </div>
+        <textarea id="outInterview" class="textarea textarea-bordered w-full h-80 leading-relaxed"></textarea>
+      </div>
+    </div>
+    <div id="matLocked" class="hidden p-6 text-center rounded-2xl border-2 border-dashed border-slate-200 bg-white">
+      <p class="font-semibold">Complete steps 1 &amp; 2, then press <span class="text-brand2">Match &amp; score</span> — your materials generate here.</p>
+    </div>
+  </section>
+
+  <!-- ============ STEP 4: TRACKER ============ -->
+  <section id="step4" class="card-step reveal">
+    <div class="step-head">
+      <div class="step-no">4</div>
+      <div>
+        <h2 class="font-heading font-bold text-2xl">Application tracker</h2>
+        <p class="text-muted text-sm mt-0.5">Every application with its next move and due date. Follow-up discipline, enforced.</p>
+      </div>
+    </div>
+    <div class="grid sm:grid-cols-4 gap-3 mb-4">
+      <label class="form-control"><span class="label-text text-xs font-semibold text-muted mb-1">Company</span><input id="trkCompany" class="input input-bordered" placeholder="Acme Corp"></label>
+      <label class="form-control"><span class="label-text text-xs font-semibold text-muted mb-1">Role</span><input id="trkRole" class="input input-bordered" placeholder="Jr. Web Dev"></label>
+      <label class="form-control"><span class="label-text text-xs font-semibold text-muted mb-1">Source</span>
+        <select id="trkSource" class="select select-bordered">
+          <option>JobStreet</option><option>Indeed PH</option><option>OnlineJobs.ph</option>
+          <option>LinkedIn</option><option>Upwork</option><option>Reddit</option>
+          <option>Facebook group</option><option>Referral</option><option>Direct</option>
+        </select></label>
+      <div class="form-control justify-end"><button id="addTrk" class="btn bg-brand2 hover:bg-brand border-brand2 text-white font-heading font-semibold">+ Add to tracker</button></div>
+    </div>
+    <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+      <table class="table table-sm">
+        <thead><tr>
+          <th>Company</th><th>Role</th><th>Source</th><th>Stage</th><th>Applied</th><th>Next action</th><th></th>
+        </tr></thead>
+        <tbody id="trkBody"></tbody>
+      </table>
+    </div>
+    <div class="mt-3 flex flex-wrap items-center gap-3">
+      <div class="stats-flex">
+        <span class="stat-chip"><b id="cntApplied">0</b> applied</span>
+        <span class="stat-chip"><b id="cntFollow">0</b> awaiting follow-up</span>
+        <span class="stat-chip"><b id="cntInterview">0</b> interviews</span>
+      </div>
+      <div class="grow"></div>
+      <button id="followAllBtn" class="btn btn-outline border-slate-300 btn-sm">Copy Day-3 follow-ups due</button>
+      <button id="trkCsv" class="btn btn-outline border-slate-300 btn-sm hidden">Export CSV (PRO)</button>
+    </div>
+    <p class="text-xs text-muted mt-2" id="trkCap"></p>
+  </section>
+
+  <!-- ============ HOW ============ -->
+  <section id="how" class="py-16">
+    <h2 class="font-heading font-bold text-3xl text-center">Why applications die — and where Closer steps in</h2>
+    <div class="grid md:grid-cols-3 gap-5 mt-8">
+      <div class="card bg-white border border-slate-200 rounded-2xl p-6 hover-lift">
+        <div class="w-10 h-10 rounded-xl bg-brand/10 text-brand2 font-heading font-bold grid place-items-center mb-3">01</div>
+        <h3 class="font-heading font-bold text-lg">The 6-second skim</h3>
+        <p class="text-sm text-muted mt-2">Recruiters and ATS filters scan for the post's exact keywords. Generic CVs die before a human reads them. Closer re-aims your CV at each post's vocabulary.</p>
+      </div>
+      <div class="card bg-white border border-slate-200 rounded-2xl p-6 hover-lift">
+        <div class="w-10 h-10 rounded-xl bg-amber-100 text-accdeep font-heading font-bold grid place-items-center mb-3">02</div>
+        <h3 class="font-heading font-bold text-lg">The silence after applying</h3>
+        <p class="text-sm text-muted mt-2">80% of applicants never follow up — yet most interviews come from the 2nd or 3rd touch. Closer writes your Day 0/3/7 messages and the tracker nags you until they're sent.</p>
+      </div>
+      <div class="card bg-white border border-slate-200 rounded-2xl p-6 hover-lift">
+        <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 font-heading font-bold grid place-items-center mb-3">03</div>
+        <h3 class="font-heading font-bold text-lg">The unprepared interview</h3>
+        <p class="text-sm text-muted mt-2">Every JD telegraphs its questions. Closer turns the post's requirements into likely questions with STAR skeletons filled from your CV.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" class="pb-16">
+    <h2 class="font-heading font-bold text-3xl text-center mb-8">FAQ</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="collapse collapse-plus bg-white border border-slate-200 rounded-2xl">
+        <input type="radio" name="faq" checked="checked"><div class="collapse-title font-semibold">Is my CV uploaded anywhere?</div>
+        <div class="collapse-content text-sm text-muted"><p>No server, no account, no analytics. Parsing, tailoring, and the tracker all run in your browser and save only to this device's local storage.</p></div>
+      </div>
+      <div class="collapse collapse-plus bg-white border border-slate-200 rounded-2xl">
+        <input type="radio" name="faq"><div class="collapse-title font-semibold">Will it write lies into my CV?</div>
+        <div class="collapse-content text-sm text-muted"><p>No. It reorders and re-emphasizes what's already in your CV, weaves in the post's keywords, and marks anything you should learn as [bracketed placeholders] for you to fill honestly.</p></div>
+      </div>
+      <div class="collapse collapse-plus bg-white border border-slate-200 rounded-2xl">
+        <input type="radio" name="faq"><div class="collapse-title font-semibold">Does the URL fetch work on every job board?</div>
+        <div class="collapse-content text-sm text-muted"><p>It tries a public reader proxy; JobStreet/LinkedIn often block bots, so pasting the post text is the reliable path (it's 10 seconds). The button never blocks you — paste always works.</p></div>
+      </div>
+      <div class="collapse collapse-plus bg-white border border-slate-200 rounded-2xl">
+        <input type="radio" name="faq"><div class="collapse-title font-semibold">What's in PRO?</div>
+        <div class="collapse-content text-sm text-muted"><p>₱199 one-time via GCash: unlimited tailored material sets (free: 3), unlimited tracker rows (free: 5), and CSV export of your pipeline. Same tool, no subscription.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta-final">
+    <h2 class="font-heading font-bold text-3xl text-white">Twenty tailored applications this week.<br><span class="text-amber-300">That's the assignment.</span></h2>
+    <p class="text-indigo-100 mt-3">Most people send 20 generic applications and get silence. You'll send 20 targeted ones with follow-up discipline — a different sport.</p>
+    <a href="#step1" class="btn bg-amber-400 hover:bg-amber-300 border-amber-400 text-ink font-heading font-bold mt-6">Start free — no signup</a>
+  </section>
+</main>
+
+<footer class="border-t border-slate-200 bg-white mt-10">
+  <div class="max-w-6xl mx-auto px-4 py-8 text-center text-sm text-muted">
+    <p class="font-heading font-bold text-ink">Closer<span class="text-accent">.</span> — land the job, not just apply.</p>
+    <p class="mt-2">Runs 100% in your browser · <a class="link link-hover text-brand2" href="https://makavelimachiavelli.github.io/">more free tools by zinvent</a> · <a class="link link-hover text-brand2" href="https://makavelimachiavelli.github.io/invoiceph/">InvoicePH</a> · <a class="link link-hover text-brand2" href="https://makavelimachiavelli.github.io/taxcalcph/">TaxCalcPH</a></p>
+    <p class="mt-2 text-xs">Materials are generated aids — always review before sending.</p>
+  </div>
+</footer>
+
+<!-- ============ PAY MODAL ============ -->
+<div id="payModal" class="modal hidden">
+  <div class="modal-card">
+    <button class="modal-x" id="payClose">✕</button>
+    <h2 class="font-heading font-bold text-2xl">Closer PRO</h2>
+    <p class="price text-3xl font-heading font-bold mt-1">₱199 <span class="text-sm font-semibold text-muted">one-time · lifetime</span></p>
+    <ul class="mt-3 space-y-1.5 text-sm">
+      <li>♾️ Unlimited tailored material sets (free: 3)</li>
+      <li>♾️ Unlimited tracker rows (free: 5)</li>
+      <li>⬇️ CSV export of your whole pipeline</li>
+    </ul>
+    <div class="qr-box">
+      <img src="gcash-qr.svg" alt="GCash QR (replace with merchant QR)" width="170" height="170">
+      <ol class="pay-steps">
+        <li>Scan the GCash QR, send <b>₱199</b>.</li>
+        <li>Enter the unlock code you receive.</li>
+      </ol>
+    </div>
+    <div class="code-row">
+      <input id="codeInput" class="input input-bordered w-full" placeholder="Enter unlock code">
+      <button id="codeBtn" class="btn bg-brand2 hover:bg-brand border-brand2 text-white font-heading">Unlock</button>
+    </div>
+    <p class="code-msg text-sm font-bold mt-2 min-h-[1.2rem]" id="codeMsg"></p>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+    <script src="app.js"></script>
+</body>
+</html>
