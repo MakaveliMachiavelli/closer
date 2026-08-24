@@ -2,7 +2,7 @@
    100% client-side. Engines are pure functions exposed on window.CloserEngine for tests. */
 'use strict';
 
-const PRO_CODES = ['CLOSER-PRO-199', 'CLOSER-DEMO'];
+const PRO_CODES = ['CLOSER-PRO-199-0F4C-D98A', 'CLOSER-PRO-199-DEMO-972C-BB7B'];
 const FREE_RUNS = 3;        // tailored material sets on free tier
 const FREE_ROWS = 5;        // tracker rows on free tier
 const LS = { cv: 'closer_cv', jd: 'closer_jd', runs: 'closer_runs', pro: 'closer_pro', trk: 'closer_trk' };
